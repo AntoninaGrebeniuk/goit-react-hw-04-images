@@ -38,7 +38,6 @@ export function App() {
           return;
         }
 
-        setIsLoading(STATUS.PENDING);
         setImages(prevImages => [...prevImages, ...hits]);
         setTotalHits(Math.ceil(totalHits / 12));
         setIsLoading(STATUS.RESOLVED);
