@@ -5,7 +5,6 @@ export function Button({ loadMore, children }) {
   return (
     <LoadMore type="button" onClick={loadMore}>
       {children}
-      {/* Load more */}
     </LoadMore>
   );
 }
