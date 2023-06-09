@@ -22,23 +22,11 @@ export function Modal({ closeModal, tags, modalImg }) {
     };
   }, [closeModal]);
 
-  // componentDidMount() {
-  //   window.addEventListener('keydown', closeByEsc);
-  //   document.body.style.overflow = 'hidden';
-  // }
-
-  // componentWillUnmount() {
-  //   window.removeEventListener('keydown', closeByEsc);
-  //   document.body.style.overflow = 'visible';
-  // }
-
   const closeByBackdrop = e => {
     if (e.currentTarget === e.target) {
       closeModal();
     }
   };
-
-  // const { tags, modalImg } = this.props;
 
   return createPortal(
     <Overlay onClick={closeByBackdrop}>
@@ -49,43 +37,6 @@ export function Modal({ closeModal, tags, modalImg }) {
     modalRoot
   );
 }
-
-// export class Modal extends Component {
-//   componentDidMount() {
-//     window.addEventListener('keydown', this.closeByEsc);
-//     document.body.style.overflow = 'hidden';
-//   }
-
-//   componentWillUnmount() {
-//     window.removeEventListener('keydown', this.closeByEsc);
-//     document.body.style.overflow = 'visible';
-//   }
-
-//   closeByEsc = e => {
-//     if (e.code === 'Escape') {
-//       this.props.closeModal();
-//     }
-//   };
-
-//   closeByBackdrop = e => {
-//     if (e.currentTarget === e.target) {
-//       this.props.closeModal();
-//     }
-//   };
-
-//   render() {
-//     const { tags, modalImg } = this.props;
-
-//     return createPortal(
-//       <Overlay onClick={this.closeByBackdrop}>
-//         <ModalBox>
-//           <ModalImg src={modalImg} loading="lazy" alt={tags} />
-//         </ModalBox>
-//       </Overlay>,
-//       modalRoot
-//     );
-//   }
-// }
 
 Modal.propTypes = {
   modalImg: PropTypes.string.isRequired,

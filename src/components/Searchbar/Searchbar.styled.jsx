@@ -1,8 +1,6 @@
 import styled from '@emotion/styled';
-// import { Form, Field } from 'formik';
 import { ImSearch } from 'react-icons/im';
 
-// export const SearchForm = styled(Form)`
 export const SearchForm = styled.form`
   position: fixed;
   top: 0;
@@ -18,7 +16,6 @@ export const SearchForm = styled.form`
   box-shadow: ${p => p.theme.shadow.searchShadow};
 `;
 
-// export const Input = styled(Field)`
 export const Input = styled.input`
   padding: 10px 20px 10px 40px;
   width: 320px;

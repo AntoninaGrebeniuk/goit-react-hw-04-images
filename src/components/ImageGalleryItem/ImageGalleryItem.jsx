@@ -6,15 +6,9 @@ import { GalleryItem, GalleryImg } from './ImageGalleryItem.styled';
 export function ImageGalleryItem({ webformatURL, tags, largeImageURL }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // state = {
-  //   isModalOpen: false,
-  // };
-
   const toggleModal = () => {
     setIsModalOpen(prevModal => !prevModal);
   };
-
-  // const { webformatURL, tags, largeImageURL } = this.props;
 
   return (
     <GalleryItem>
@@ -31,40 +25,6 @@ export function ImageGalleryItem({ webformatURL, tags, largeImageURL }) {
     </GalleryItem>
   );
 }
-
-// export class ImageGalleryItem extends Component {
-//   state = {
-//     isModalOpen: false,
-//   };
-
-//   toggleModal = () => {
-//     this.setState(prevState => ({ isModalOpen: !prevState.isModalOpen }));
-//   };
-
-//   render() {
-//     const { webformatURL, tags, largeImageURL } = this.props;
-//     const { isModalOpen } = this.state;
-
-//     return (
-//       <GalleryItem>
-//         <GalleryImg
-//           src={webformatURL}
-//           alt={tags}
-//           loading="lazy"
-//           onClick={this.toggleModal}
-//         />
-
-//         {isModalOpen && (
-//           <Modal
-//             modalImg={largeImageURL}
-//             tags={tags}
-//             closeModal={this.toggleModal}
-//           />
-//         )}
-//       </GalleryItem>
-//     );
-//   }
-// }
 
 ImageGalleryItem.propTypes = {
   webformatURL: PropTypes.string.isRequired,
